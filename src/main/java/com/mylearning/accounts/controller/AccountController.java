@@ -13,14 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path= "/api/v1", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/api/v1", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AccountController {
 
-    @PostMapping(path="/create")
+    @PostMapping(path = "/create")
     public ResponseEntity<ResponseDto> createAccount(@RequestBody CustomerDto customerDto) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(new ResponseDto(ApplicationConstants.STATUS_201,ApplicationConstants.MESSAGE_201));
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(new ResponseDto(ApplicationConstants.STATUS_201, ApplicationConstants.MESSAGE_201));
     }
-
-
-
 }
