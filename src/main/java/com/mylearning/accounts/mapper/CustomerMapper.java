@@ -5,14 +5,14 @@ import com.mylearning.accounts.entity.Customer;
 
 public class CustomerMapper {
 
-    public CustomerDto mapToCustomerDto(Customer customer, CustomerDto customerDto) {
+    public static CustomerDto mapToCustomerDto(Customer customer, CustomerDto customerDto) {
         customerDto.setEmail(customer.getEmail());
         customerDto.setName(customer.getName());
         customerDto.setMobileNumber(customer.getMobileNumber());
         return customerDto;
     }
 
-    public Customer mapToCustomer(CustomerDto customerDto, Customer customer) {
+    public static Customer mapToCustomer(CustomerDto customerDto, Customer customer) {
         customer.setName(customerDto.getName());
         customer.setMobileNumber(customerDto.getMobileNumber());
         customer.setEmail(customerDto.getEmail());
