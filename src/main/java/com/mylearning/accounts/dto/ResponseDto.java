@@ -1,5 +1,6 @@
 package com.mylearning.accounts.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,6 +8,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Schema(
+        name="Response",
+        description = "Holds the response of the request"
+)
 public class ResponseDto {
     private String statusCode;
     private String statusMsg;
