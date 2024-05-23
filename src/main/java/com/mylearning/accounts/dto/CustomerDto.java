@@ -10,7 +10,7 @@ import lombok.Data;
 public class CustomerDto {
 
     @NotEmpty(message = "Name cannot be empty")
-    @Size(min = 5, max = 20, message = "")
+    @Size(min = 5, max = 20, message = "Name length should be of min 5 length to 20 length")
     private String name;
 
     @NotEmpty(message = "email address cannot be empty")
